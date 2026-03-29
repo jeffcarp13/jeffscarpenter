@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UX Evangelism — Jeff S Carpenter</title>
+  <meta name="description" content="Advancing UX maturity and evangelizing user-centered design across organizations.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header" id="header">
+    <nav class="container nav">
+      <a href="/" class="nav-logo">Jeff S Carpenter</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/experience.html">Experience</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="hero-label">Leadership</p>
+      <h1>UX Evangelism</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container case-study">
+      <div class="case-body">
+        <h2>Advancing UX Maturity</h2>
+        <p>Great UX doesn't happen just because you hire talented designers. It requires organization-wide understanding of why user-centered design matters and how it drives business outcomes. UX evangelism is the practice of building that understanding — and it's been a core part of my leadership approach throughout my career.</p>
+
+        <h2>The Challenge</h2>
+        <p>In many organizations — especially enterprise environments — UX is still seen as "making things pretty" or a phase that happens after the real decisions are made. To build world-class products, design needs a seat at the table from the start.</p>
+
+        <h2>My Approach</h2>
+        <ul>
+          <li><strong>Speak the language of business</strong> — Frame UX impact in terms of revenue, retention, CSAT, and efficiency. Executives respond to metrics, not design principles.</li>
+          <li><strong>Show, don't tell</strong> — Run stakeholder workshops, usability test viewing sessions, and design reviews that let non-designers experience the value of UX firsthand.</li>
+          <li><strong>Build allies</strong> — Partner with product management, engineering, and customer success to create a coalition that advocates for user needs.</li>
+          <li><strong>Measure and share</strong> — Use frameworks like UMUX+ to quantify UX quality and share improvements transparently across the organization.</li>
+          <li><strong>Educate continuously</strong> — Lunch-and-learns, internal newsletters, and design thinking workshops keep UX visible and accessible.</li>
+        </ul>
+
+        <h2>Author: <em>Hey, UX! Hey, PM!</em></h2>
+        <p>I authored <em>Hey, UX! Hey, PM!</em> — a guide for Product Managers and UX Designers to enhance their collaboration. The book addresses the common friction points between PM and UX and provides practical frameworks for better partnership.</p>
+
+        <h2>Results</h2>
+        <p>Through sustained evangelism, I've advanced UX maturity across multiple organizations — growing design teams, securing investment in research, establishing design systems, and shifting how leadership thinks about the role of design in product strategy.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container contact-section">
+      <h2 class="section-title">Explore More</h2>
+      <div class="contact-links">
+        <a href="/xteam.html" class="btn">X-Team Model</a>
+        <a href="/doublediamond.html" class="btn btn-outline">Double Diamond</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2025 Jeff S Carpenter. All rights reserved.</p>
+      <ul class="footer-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/experience.html">Experience</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+    window.addEventListener('scroll', () => {
+      document.getElementById('header').classList.toggle('scrolled', window.scrollY > 10);
+    });
+  </script>
+</body>
+</html>

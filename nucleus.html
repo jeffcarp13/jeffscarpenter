@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nucleus — Jeff S Carpenter</title>
+  <meta name="description" content="Nucleus: An enterprise design system case study by Jeff S Carpenter.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header" id="header">
+    <nav class="container nav">
+      <a href="/" class="nav-logo">Jeff S Carpenter</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/experience.html">Experience</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="hero-label">Case Study</p>
+      <h1>Nucleus</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container case-study">
+      <div class="case-meta">
+        <div class="case-meta-item">
+          <h4>Role</h4>
+          <p>UX Design &amp; Research Leadership</p>
+        </div>
+        <div class="case-meta-item">
+          <h4>Domain</h4>
+          <p>Enterprise Design System</p>
+        </div>
+        <div class="case-meta-item">
+          <h4>Scope</h4>
+          <p>Company-Wide Product Suite</p>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <h2>Overview</h2>
+        <p>Nucleus is an enterprise design system built to unify the user experience across a suite of web-based products. It serves as the foundation for consistent, accessible, and scalable UI across the organization.</p>
+
+        <h2>The Challenge</h2>
+        <p>As product suites grow, inconsistency creeps in — different teams build different patterns, components drift apart, and the user experience becomes fragmented. Development slows as teams reinvent solutions, and quality suffers without shared standards.</p>
+
+        <h2>The Approach</h2>
+        <p>Building Nucleus required a systematic approach to design operations:</p>
+        <ul>
+          <li><strong>Audit &amp; inventory</strong> — Cataloged existing components, patterns, and inconsistencies across the product suite</li>
+          <li><strong>Token architecture</strong> — Established a design token system for color, typography, spacing, and elevation</li>
+          <li><strong>Component library</strong> — Built a shared library of accessible, flexible components</li>
+          <li><strong>Documentation</strong> — Created usage guidelines, interaction patterns, and implementation specs</li>
+          <li><strong>Governance</strong> — Established a contribution model and review process to keep the system healthy</li>
+        </ul>
+
+        <h2>Key Principles</h2>
+        <div class="why-grid" style="margin-top: 24px;">
+          <div class="why-card">
+            <h3>Consistency</h3>
+            <p>A unified visual language and interaction model across every product in the suite.</p>
+          </div>
+          <div class="why-card">
+            <h3>Accessibility</h3>
+            <p>WCAG compliance built into every component from the start, not bolted on later.</p>
+          </div>
+          <div class="why-card">
+            <h3>Scalability</h3>
+            <p>Designed to grow with the organization — new products adopt the system from day one.</p>
+          </div>
+        </div>
+
+        <h2>Impact</h2>
+        <p>Nucleus became one of 4 company-wide design systems I've developed across my career, each driving measurable improvements in consistency, development velocity, and user satisfaction metrics including NPS, CSAT, and digital adoption.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container contact-section">
+      <h2 class="section-title">Explore More Work</h2>
+      <div class="contact-links">
+        <a href="/experience.html" class="btn">View Experience</a>
+        <a href="/" class="btn btn-outline">Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2025 Jeff S Carpenter. All rights reserved.</p>
+      <ul class="footer-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/experience.html">Experience</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+    window.addEventListener('scroll', () => {
+      document.getElementById('header').classList.toggle('scrolled', window.scrollY > 10);
+    });
+  </script>
+</body>
+</html>

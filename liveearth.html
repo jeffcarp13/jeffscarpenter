@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Earth — Jeff S Carpenter</title>
+  <meta name="description" content="Live Earth: A real-time data visualization and mapping platform co-founded by Jeff Carpenter.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header" id="header">
+    <nav class="container nav">
+      <a href="/" class="nav-logo">Jeff S Carpenter</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/experience.html">Experience</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="hero-label">Case Study</p>
+      <h1>Live Earth</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container case-study">
+      <div class="case-meta">
+        <div class="case-meta-item">
+          <h4>Role</h4>
+          <p>Co-Founder, CEO &amp; Chief Product Officer</p>
+        </div>
+        <div class="case-meta-item">
+          <h4>Domain</h4>
+          <p>Real-Time Data Visualization &amp; Mapping</p>
+        </div>
+        <div class="case-meta-item">
+          <h4>Industries</h4>
+          <p>Defense, Security, Enterprise Operations</p>
+        </div>
+      </div>
+
+      <div class="case-body">
+        <h2>Overview</h2>
+        <p>Live Earth is a real-time data visualization and mapping platform designed to aggregate live data feeds from multiple systems onto a single interactive map, creating a visual operations center for decision makers.</p>
+        <p>The platform was purpose-built to decrease response times for key decision makers by providing unified situational awareness across complex operational environments.</p>
+
+        <h2>The Challenge</h2>
+        <p>Organizations managing complex operations — from security teams to emergency responders — rely on data from dozens of disparate IT systems, sensors, and real-time feeds. Decision makers needed a way to see all of this information in context, on a single unified view, to reduce response times and improve outcomes.</p>
+
+        <h2>The Solution</h2>
+        <p>Live Earth visualizes and animates millions of data points simultaneously from dozens of IT systems, real-time data feeds, and sensors. Key capabilities include:</p>
+        <ul>
+          <li><strong>Real-time aggregation</strong> — Bring live data from every connected system onto an immersive, interactive map</li>
+          <li><strong>Time-series playback</strong> — DVR-like timeline controls let users rewind and replay data to reconstruct incidents instantly</li>
+          <li><strong>Video integration</strong> — Live video from camera systems correlated with other real-time data feeds on the map</li>
+          <li><strong>Intuitive interaction</strong> — Touch-screen navigation similar to smartphones, with familiar gesture controls</li>
+          <li><strong>Scalable architecture</strong> — Handle millions of simultaneous data points without sacrificing performance</li>
+        </ul>
+
+        <h2>My Contribution</h2>
+        <p>As Co-Founder, CEO, and Chief Product Officer, I was responsible for the product vision, UX strategy, and design execution. This included:</p>
+        <ul>
+          <li>Defining the product vision and go-to-market strategy</li>
+          <li>Leading UX design and research for the platform's interface</li>
+          <li>Building the team from the ground up</li>
+          <li>Negotiating IP transfer from the U.S. Government</li>
+          <li>Raising $14M in capital investment</li>
+          <li>Transitioning prototypes from government R&amp;D into a commercial product</li>
+        </ul>
+
+        <h2>Impact</h2>
+        <div class="case-impact">
+          <div class="impact-item">
+            <span class="impact-number">$14M</span>
+            <span class="impact-label">Capital raised</span>
+          </div>
+          <div class="impact-item">
+            <span class="impact-number">Millions</span>
+            <span class="impact-label">Simultaneous data points visualized</span>
+          </div>
+          <div class="impact-item">
+            <span class="impact-number">Dozens</span>
+            <span class="impact-label">IT systems integrated</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container contact-section">
+      <h2 class="section-title">Explore More Work</h2>
+      <div class="contact-links">
+        <a href="/experience.html" class="btn">View Experience</a>
+        <a href="/" class="btn btn-outline">Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2025 Jeff S Carpenter. All rights reserved.</p>
+      <ul class="footer-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/experience.html">Experience</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+    window.addEventListener('scroll', () => {
+      document.getElementById('header').classList.toggle('scrolled', window.scrollY > 10);
+    });
+  </script>
+</body>
+</html>

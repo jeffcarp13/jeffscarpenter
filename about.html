@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me — Jeff S Carpenter</title>
+  <meta name="description" content="Learn about Jeff S Carpenter's background as an Innovation, Product, and Design (UX) Leader with 20+ years of experience.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" id="header">
+    <nav class="container nav">
+      <a href="/" class="nav-logo">Jeff S Carpenter</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html" class="active">About</a></li>
+        <li><a href="/experience.html">Experience</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- About Content -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>About Me</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container about-content">
+      <div class="about-intro">
+        <p class="lead">I'm an Innovation, Product, and Design (UX) Leader with deep experience driving business outcomes in startups and Fortune 500 companies through UX and innovative products.</p>
+        <p>For over 20 years, I've led multidisciplinary design teams — spearheading UX vision, strategy, and execution across B2C, B2B, Enterprise, SaaS, Cloud, Web, Desktop, and Mobile platforms.</p>
+        <p>My work spans diverse industries including defense (DARPA, SOCOM, US Army, US Navy), enterprise software, healthcare, and commercial technology — always with a focus on building teams, scaling design operations, and delivering measurable outcomes.</p>
+      </div>
+
+      <div class="about-details">
+        <div class="about-block">
+          <h2>What I Do</h2>
+          <p>I build UX teams and scale design operations across organizations using design-thinking methodologies and user-centered design principles. My approach combines strategic leadership with hands-on expertise to bridge the gap between business goals and user needs.</p>
+        </div>
+
+        <div class="about-block">
+          <h2>Experience at a Glance</h2>
+          <ul class="experience-list">
+            <li><strong>15 Years</strong> — Leading UX Design Teams</li>
+            <li><strong>10 Years</strong> — Directing UX Research Teams</li>
+            <li><strong>10 Years</strong> — Executing Design Operations &amp; Strategy</li>
+            <li><strong>10 Years</strong> — Designer/Developer Creating Innovative Software</li>
+            <li><strong>5 Years</strong> — Crafting &amp; Managing Design Systems</li>
+          </ul>
+        </div>
+
+        <div class="about-block">
+          <h2>Core Capabilities</h2>
+          <div class="tags">
+            <span class="tag">UX Strategy</span>
+            <span class="tag">Design Systems</span>
+            <span class="tag">Design Operations</span>
+            <span class="tag">User Research</span>
+            <span class="tag">Product Design</span>
+            <span class="tag">Team Building</span>
+            <span class="tag">AI / ML</span>
+            <span class="tag">Data Visualization</span>
+            <span class="tag">IoT</span>
+            <span class="tag">Cloud Platforms</span>
+            <span class="tag">SaaS</span>
+            <span class="tag">Enterprise Software</span>
+            <span class="tag">Digital Transformation</span>
+            <span class="tag">Agile / Lean</span>
+          </div>
+        </div>
+
+        <div class="about-block">
+          <h2>Entrepreneurship</h2>
+          <p>Beyond corporate leadership, I founded a UX design agency and bootstrapped it to 50 people and $7M+ in annual revenue. I've also raised $14M in capital investment and negotiated IP transfer from the U.S. Government, transitioning 4 prototypes to major Department of Defense programs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2025 Jeff S Carpenter. All rights reserved.</p>
+      <ul class="footer-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/experience.html">Experience</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+    window.addEventListener('scroll', () => {
+      document.getElementById('header').classList.toggle('scrolled', window.scrollY > 10);
+    });
+  </script>
+</body>
+</html>

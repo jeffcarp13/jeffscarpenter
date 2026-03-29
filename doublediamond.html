@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Double Diamond — Jeff S Carpenter</title>
+  <meta name="description" content="The Double Diamond design process as applied in practice by Jeff S Carpenter.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header" id="header">
+    <nav class="container nav">
+      <a href="/" class="nav-logo">Jeff S Carpenter</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/experience.html">Experience</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="hero-label">Process</p>
+      <h1>Double Diamond</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container case-study">
+      <div class="case-body">
+        <h2>The Framework</h2>
+        <p>The Double Diamond is a design process model that maps the divergent and convergent stages of design thinking. Originally developed by the British Design Council, it provides a clear, visual way to describe the design process and has become a cornerstone of how I approach product design and UX strategy.</p>
+
+        <h2>Four Phases</h2>
+        <div class="diamond-grid">
+          <div class="diamond-phase">
+            <div class="phase-number">01</div>
+            <h3>Discover</h3>
+            <p>Divergent exploration of the problem space. Research, interviews, observation, and data analysis to understand user needs, pain points, and the broader context.</p>
+          </div>
+          <div class="diamond-phase">
+            <div class="phase-number">02</div>
+            <h3>Define</h3>
+            <p>Convergent synthesis of research findings. Identify patterns, frame the core problem, and align stakeholders around a clear problem statement and design brief.</p>
+          </div>
+          <div class="diamond-phase">
+            <div class="phase-number">03</div>
+            <h3>Develop</h3>
+            <p>Divergent exploration of solutions. Ideation, prototyping, and iterative testing to explore a wide range of possible solutions to the defined problem.</p>
+          </div>
+          <div class="diamond-phase">
+            <div class="phase-number">04</div>
+            <h3>Deliver</h3>
+            <p>Convergent refinement and implementation. Select the strongest solution, refine it through testing, and deliver a polished product ready for users.</p>
+          </div>
+        </div>
+
+        <h2>How I Apply It</h2>
+        <p>Throughout my career leading UX teams across startups and Fortune 500 companies, the Double Diamond has served as both a practical framework and a communication tool. It helps me:</p>
+        <ul>
+          <li><strong>Align cross-functional teams</strong> — Give product, engineering, and business stakeholders a shared language for where we are in the process</li>
+          <li><strong>Prevent solution-jumping</strong> — Ensure teams spend adequate time understanding the problem before rushing to solutions</li>
+          <li><strong>Scale design operations</strong> — Provide a repeatable process that new team members can follow and adapt</li>
+          <li><strong>Justify research investment</strong> — Show leadership why the discovery and define phases are essential to building the right thing</li>
+        </ul>
+
+        <h2>Adapted for Enterprise</h2>
+        <p>In enterprise environments, I've adapted the Double Diamond to work within agile sprint cycles, integrating continuous discovery alongside delivery. This ensures that research insights flow directly into product decisions while maintaining the rigor of the full framework.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container contact-section">
+      <h2 class="section-title">Explore More</h2>
+      <div class="contact-links">
+        <a href="/umux.html" class="btn">UMUX+ Metrics</a>
+        <a href="/careerpaths.html" class="btn btn-outline">Career Paths</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2025 Jeff S Carpenter. All rights reserved.</p>
+      <ul class="footer-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/experience.html">Experience</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+    window.addEventListener('scroll', () => {
+      document.getElementById('header').classList.toggle('scrolled', window.scrollY > 10);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sailing — Jeff S Carpenter</title>
+  <meta name="description" content="Sailing and life beyond the screen — Jeff S Carpenter's personal interests.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header" id="header">
+    <nav class="container nav">
+      <a href="/" class="nav-logo">Jeff S Carpenter</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/experience.html">Experience</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="hero-label">Beyond the Screen</p>
+      <h1>Sailing</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container case-study">
+      <div class="case-body">
+        <h2>Life on the Water</h2>
+        <p>When I'm not leading design teams or building products, you'll find me on the water. Sailing has been a lifelong passion that offers the perfect counterbalance to the digital world — it demands presence, adaptability, and teamwork in the most visceral way.</p>
+
+        <h2>British Virgin Islands</h2>
+        <p>The BVI is a special place for sailing — crystal-clear waters, steady trade winds, and some of the best anchorages in the Caribbean. I organize annual bareboat sailing trips with family and friends to explore the islands, disconnect, and recharge.</p>
+
+        <h2>What Sailing Teaches</h2>
+        <p>There are surprising parallels between sailing and design leadership:</p>
+        <ul>
+          <li><strong>Read the conditions</strong> — Like user research, you have to understand the environment before making decisions</li>
+          <li><strong>Adapt to change</strong> — Wind shifts, just like requirements — the best plans are flexible plans</li>
+          <li><strong>Crew coordination</strong> — A boat runs on teamwork and clear communication, just like a product team</li>
+          <li><strong>Respect the system</strong> — You can't fight the ocean any more than you can fight user behavior</li>
+        </ul>
+
+        <p>Sailing reminds me that the best experiences — whether digital or physical — are the ones designed with respect for the people and forces involved.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container contact-section">
+      <h2 class="section-title">More About Me</h2>
+      <div class="contact-links">
+        <a href="/about.html" class="btn">About</a>
+        <a href="/" class="btn btn-outline">Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2025 Jeff S Carpenter. All rights reserved.</p>
+      <ul class="footer-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/experience.html">Experience</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+    window.addEventListener('scroll', () => {
+      document.getElementById('header').classList.toggle('scrolled', window.scrollY > 10);
+    });
+  </script>
+</body>
+</html>
