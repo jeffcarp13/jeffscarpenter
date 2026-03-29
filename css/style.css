@@ -1,17 +1,34 @@
+/* === Fonts === */
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/avenir-light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/avenir-heavy.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* === Reset & Base === */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --color-bg: #fafafa;
-  --color-dark: #1a1a2e;
+  --color-bg: #f6f6f6;
+  --color-dark: #281a39;
   --color-accent: #0069ff;
   --color-accent-hover: #0054cc;
   --color-white: #ffffff;
   --color-muted: #5a5a6e;
   --color-light: #f0f0f5;
   --color-border: rgba(0, 0, 0, 0.08);
-  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-display: 'Playfair Display', Georgia, serif;
+  --font-primary: 'Avenir', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  --font-display: 'Avenir', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   --radius: 12px;
   --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
   --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
@@ -45,7 +62,7 @@ ul { list-style: none; }
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(250, 250, 250, 0.92);
+  background: rgba(246, 246, 246, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--color-border);
@@ -64,7 +81,7 @@ ul { list-style: none; }
 }
 
 .nav-logo {
-  font-weight: 700;
+  font-weight: 800;
   font-size: 1.1rem;
   color: var(--color-dark);
   letter-spacing: -0.02em;
@@ -159,7 +176,7 @@ ul { list-style: none; }
 .hero h1 {
   font-family: var(--font-display);
   font-size: clamp(2.2rem, 5vw, 3.6rem);
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.15;
   margin-bottom: 24px;
   color: var(--color-dark);
@@ -196,7 +213,7 @@ ul { list-style: none; }
 .page-hero h1 {
   font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 700;
+  font-weight: 800;
   color: var(--color-dark);
 }
 
@@ -212,7 +229,7 @@ ul { list-style: none; }
 .section-title {
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 3vw, 2.2rem);
-  font-weight: 700;
+  font-weight: 800;
   text-align: center;
   margin-bottom: 16px;
   color: var(--color-dark);
@@ -242,7 +259,7 @@ ul { list-style: none; }
 .stat-number {
   display: block;
   font-size: clamp(2rem, 4vw, 2.8rem);
-  font-weight: 700;
+  font-weight: 800;
   color: var(--color-accent);
   line-height: 1.2;
   margin-bottom: 8px;
@@ -276,7 +293,7 @@ ul { list-style: none; }
 
 .expertise-card h3 {
   font-size: 1.05rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 10px;
   color: var(--color-dark);
 }
@@ -303,7 +320,7 @@ ul { list-style: none; }
 
 .highlight-metric {
   font-size: 1.3rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--color-accent);
   margin-bottom: 12px;
 }
@@ -358,7 +375,7 @@ ul { list-style: none; }
 .about-block h2 {
   font-family: var(--font-display);
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 16px;
   color: var(--color-dark);
 }
@@ -387,7 +404,7 @@ ul { list-style: none; }
 
 .experience-list strong {
   color: var(--color-accent);
-  font-weight: 700;
+  font-weight: 800;
 }
 
 /* === Tags === */
@@ -449,7 +466,7 @@ ul { list-style: none; }
 
 .timeline-content h3 {
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 4px;
   color: var(--color-dark);
 }
@@ -507,7 +524,7 @@ ul { list-style: none; }
 
 .work-card h3 {
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 8px;
   color: var(--color-dark);
 }
@@ -551,7 +568,7 @@ ul { list-style: none; }
 .case-body h2 {
   font-family: var(--font-display);
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 800;
   margin: 40px 0 16px;
   color: var(--color-dark);
 }
@@ -616,7 +633,7 @@ ul { list-style: none; }
 .impact-number {
   display: block;
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--color-accent);
   margin-bottom: 6px;
 }
@@ -642,7 +659,7 @@ ul { list-style: none; }
 
 .why-card h3 {
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 8px;
   color: var(--color-accent);
 }
@@ -670,7 +687,7 @@ ul { list-style: none; }
 
 .phase-number {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--color-accent);
   opacity: 0.3;
   margin-bottom: 8px;
@@ -679,7 +696,7 @@ ul { list-style: none; }
 
 .diamond-phase h3 {
   font-size: 1.05rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 8px;
   color: var(--color-dark);
 }
@@ -707,7 +724,7 @@ ul { list-style: none; }
 
 .career-track h3 {
   font-size: 1.05rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--color-accent);
   margin-bottom: 8px;
 }
@@ -743,7 +760,7 @@ ul { list-style: none; }
   position: absolute;
   left: 0;
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--color-accent);
   opacity: 0.5;
 }
